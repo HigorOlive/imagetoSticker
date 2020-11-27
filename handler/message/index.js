@@ -103,7 +103,7 @@ module.exports = msgHandler = async (client, message) => {
             if (args.length !== 1) return client.reply(from, '*Desculpe, o formato da mensagem está errado, por favor verifique o menu. [Formato incorreto]*', id)
             if (is.Giphy(url)) {
                 const getGiphyCode = url.match(new RegExp(/(\/|\-)(?:.(?!(\/|\-)))+$/, 'gi'))
-                if (!getGiphyCode) { return client.reply(from, '*Falha ao recuperar o código giphy'*, id) }
+                if (!getGiphyCode) { return client.reply(from, '*Falha ao recuperar o código giphy*', id) }
                 const giphyCode = getGiphyCode[0].replace(/[-\/]/gi, '')
                 const smallGifUrl = 'https://media.giphy.com/media/' + giphyCode + '/giphy-downsized.gif'
                 client.sendGiphyAsSticker(from, smallGifUrl).then(() => {
