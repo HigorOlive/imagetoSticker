@@ -71,3 +71,9 @@ const options = {
 create(options)
     .then((client) => start(client))
     .catch((err) => new Error(err))
+	
+	}
+	
+	if (!getGiphyCode) { return client.reply(from, '*Falha ao recuperar o código giphy*', id) }
+	
+	}
